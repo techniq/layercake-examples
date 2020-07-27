@@ -10,9 +10,9 @@
 
   export let nodeWidth = 5;
   export let nodePadding = 10;
-  export let linkSort = null;
+  export let linkSort = undefined;
   export let nodeId = (d) => d.id;
-  export let nodeAlign = Sankey.sankeyLeft;
+  export let nodeAlign = Sankey.sankeyJustify;
 
   $: sankey = Sankey.sankey()
     .nodeAlign(nodeAlign)
