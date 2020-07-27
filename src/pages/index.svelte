@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { params } from '@sveltech/routify'
+  import { params } from '@sveltech/routify';
 </script>
 
 <main>

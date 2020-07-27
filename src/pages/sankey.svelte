@@ -4,8 +4,15 @@
   import Sankey from '../components/Sankey.svelte';
 
   import data from '../data/sankey-data';
-
 </script>
+
+<div class="chart-container">
+  <LayerCake {data}>
+    <Svg>
+      <Sankey colorNodes={(d) => '#989898'} nodeId={(d, i) => i} />
+    </Svg>
+  </LayerCake>
+</div>
 
 <style>
   .chart-container {
@@ -13,16 +20,3 @@
     height: 100%;
   }
 </style>
-
-<div class="chart-container">
-  <LayerCake
-    {data}
-  >
-    <Svg>
-      <Sankey
-        colorNodes={d => '#989898'}
-        nodeId={(d, i) => i}
-      />
-    </Svg>
-  </LayerCake>
-</div>
