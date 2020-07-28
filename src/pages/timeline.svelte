@@ -3,7 +3,7 @@
   import { timeDay } from 'd3-time';
   import { scaleBand } from 'd3-scale';
 
-  import ScatterSvg from '../components/Scatter.svelte';
+  import Scatter from '../components/Scatter.svelte';
   import AxisX from '../components/AxisX.svelte';
   import AxisY from '../components/AxisY.svelte';
 
@@ -74,7 +74,7 @@
         formatTick={(d) => `${Math.floor(d / 60 / 60)}:00`}
       />
       <AxisY />
-      <ScatterSvg
+      <Scatter
         {r}
         fill={'rgba(255, 204, 0, 0.75)'}
         dy={(scale) => scale.bandwidth() / 2}
