@@ -5,7 +5,7 @@
 
 <Router {routes} />
 
-<style global>
+<style type="text/postcss" global>
   @tailwind base;
   @tailwind components;
   @tailwind utilities;
