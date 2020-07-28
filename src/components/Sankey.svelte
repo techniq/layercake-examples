@@ -41,8 +41,8 @@
         stroke-width={Math.max(1, d.width)}
         stroke-opacity={highlightLinkIndexes.includes(i) ? 0.5 : 0.1}
         fill="none"
-        on:mouseover={(e) => highlightLinkIndexes = [i] }
-        on:mouseout={(e) => highlightLinkIndexes = [] }
+        on:mouseover={(e) => (highlightLinkIndexes = [i])}
+        on:mouseout={(e) => (highlightLinkIndexes = [])}
       />
     {/each}
   </g>
@@ -55,13 +55,10 @@
         width={d.x1 - d.x0}
         fill={colorNodes(d)}
         on:mouseover={(e) => {
-          highlightLinkIndexes = [
-            ...d.sourceLinks.map(l => l.index),
-            ...d.targetLinks.map(l => l.index),
-          ]
+          highlightLinkIndexes = [...d.sourceLinks.map((l) => l.index), ...d.targetLinks.map((l) => l.index)];
         }}
         on:mouseout={(e) => {
-          highlightLinkIndexes = []
+          highlightLinkIndexes = [];
         }}
       />
       <text

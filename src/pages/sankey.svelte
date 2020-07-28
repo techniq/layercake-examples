@@ -9,7 +9,11 @@
 <div class="w-full h-full">
   <LayerCake {data}>
     <Svg>
-      <Sankey colorNodes={(d) => '#989898'} nodeId={(d, i) => i} nodeWidth={15} />
+      <Sankey
+        colorNodes={(d) => '#989898'}
+        nodeId={(d, i) => i}
+        nodeWidth={15}
+      />
     </Svg>
   </LayerCake>
 </div>
