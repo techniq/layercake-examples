@@ -6,17 +6,10 @@
   import data from '../data/sankey-data';
 </script>
 
-<div class="chart-container">
+<div class="w-full h-full">
   <LayerCake {data}>
     <Svg>
       <Sankey colorNodes={(d) => '#989898'} nodeId={(d, i) => i} nodeWidth={15} />
     </Svg>
   </LayerCake>
 </div>
-
-<style>
-  .chart-container {
-    width: 100%;
-    height: 100%;
-  }
-</style>
