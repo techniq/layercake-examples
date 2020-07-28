@@ -35,6 +35,8 @@
   },
   "dependencies": {
     "d3-sankey": "^0.12.3",
+    "d3-scale": "^3.2.1",
+    "d3-time": "^1.1.0",
     "sirv-cli": "^1.0.0"
   }
 }
