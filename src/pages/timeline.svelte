@@ -16,14 +16,17 @@
   const padding = 2;
 
   const daysTransformed = data.map((d) => {
-    const parts = d.timestring.split('T');
-    const time = parts[1]
+    const [date, time] = d.timestring.split('T');
+    const [hours, minutes, seconds] = time
       .replace('Z', '')
       .split(':')
       .map((q) => +q);
-    d[xKey] = time[0] * 60 * 60 + time[1] * 60 + time[2];
-    d[yKey] = parts[0];
-    return d;
+
+    return {
+      ...d,
+      [xKey]: hours * 60 * 60 + minutes * 60 + seconds,
+      [yKey]: date
+    }
   });
 
   /* --------------------------------------------
