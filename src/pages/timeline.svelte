@@ -25,8 +25,8 @@
     return {
       ...d,
       [xKey]: hours * 60 * 60 + minutes * 60 + seconds,
-      [yKey]: date
-    }
+      [yKey]: date,
+    };
   });
 
   /* --------------------------------------------
@@ -76,7 +76,7 @@
       <AxisY />
       <Scatter
         {r}
-        fill={'rgba(255, 204, 0, 0.75)'}
+        fill="rgba(255, 204, 0, 0.75)"
         dy={(scale) => scale.bandwidth() / 2}
       />
     </Svg>
