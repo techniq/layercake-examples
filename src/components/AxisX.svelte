@@ -74,7 +74,6 @@
   line,
   .tick line {
     stroke: #aaa;
-    stroke-dasharray: 2;
   }
 
   .tick text {
